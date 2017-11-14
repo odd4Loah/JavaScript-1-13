@@ -1,0 +1,11 @@
+.box0 {
+    padding: 1% 0 0 1%;
+}
+.box {
+    background-color: #FF8C00;
+    margin: 0 3% 3% 0 ;
+    padding: 30% 0 0 0  ;
+    width: 30%;
+    float: left;
+    border-radius: 5%;
+}

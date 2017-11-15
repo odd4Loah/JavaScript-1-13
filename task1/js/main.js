@@ -15,9 +15,8 @@ function flashStart() {
     console.log(out);
 
 
-    var choose_num = document.getElementsByClassName("box") [0];
-    //获取到每个格子的dom，然后随机取三个数，
-    choose_num.style.backgroundColor = "#27b280";                    //随机取一个颜色
+    var choose_num = document.getElementsByClassName("box") [0];             //获取到每个格子的dom，然后随机取三个数，
+    choose_num.style.backgroundColor = "#27b280";                            //随机取一个颜色
 
 }
 

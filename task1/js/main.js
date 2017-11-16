@@ -41,3 +41,4 @@ function flashEnd() {
             choose_num[arr[x]].style.backgroundColor = "#ff7f00";
         }
 }
+

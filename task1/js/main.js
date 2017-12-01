@@ -16,7 +16,7 @@ function flashStart() {
             for (var i=0, len=out.length; i<len; i++) {
                 choose_num[out[i]].style.backgroundColor = randomColor() ;         //获取到每个格子的dom，然后随机取三个数.
             }
-            function randomColor () {                                             // randomColor ()
+            function randomColor () {                                             // randomColor () 随机取一波颜色
                 const r = Math.round(Math.random()*255);
                 const g = Math.round(Math.random()*255);
                 const b = Math.round(Math.random()*255);

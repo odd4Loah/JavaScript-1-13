@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>玩家配比</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script src="../js/jquery.min.js"></script>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/base.css">
+    <link href="../css/main-0.css" rel="stylesheet">
+    <link rel="stylesheet" href="../main-setplayer.css">
+    <script src="../js/bootstrap.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="box-lf">
+            <div onclick="window.location.href = '../index.html' ">
+                <div class="top-home">
+                    <img src="../img/back-icon.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="box-mid"><span>参数设置</span></div>
+        <div class="box-rit">
+            <a href="#" >
+                <div class="top-tips">
+                    <img src="../img/tips.png" alt="">
+                </div>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <div class="main-top-select">
+            <div class="main-title">
+                <h4>玩家配比</h4>
+            </div>
+            <div class="main-role">
+                <div class="role-box">
+                    <ul id="role-list" class="list-style"></ul>
+                </div>
+                <button class="role-set" onclick="setPlayerNumber()" type="button">点击设置</button>
+            </div>
+        </div>
+        <div class="main-mid-input">
+            <input type="text" placeholder="平民词组" class="input-words">
+            <input type="text" placeholder="杀手词组" class="input-words">
+        </div>
+        <div class="main-foot-role-num">
+            <span>玩家人数</span>
+            <input id="playerNum" type="text" onchange="getValue()">
+            <span>人</span>
+            <div class="regulator">
+                <button class="glyphicon glyphicon-minus" onclick="minus()"></button>
+                <input name="playform" id="playBar" value="0" min="4" max="18" oninput="change()" onchange="change()" type="range">
+                <button class="glyphicon glyphicon-plus" onclick="plus()"></button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <button class="foot-function" type="button" onclick="">去发牌</button>
+    </footer>
+    <script src="../js/setPlayer.js"></script>
+</body>
+</html>

@@ -1,3 +1,5 @@
+
+
 var message;
 alert();
 alert(age);

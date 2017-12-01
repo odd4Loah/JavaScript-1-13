@@ -1,0 +1,139 @@
+html {
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+header {
+    background: #29bde0;
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    position: fixed;
+    top: 0;
+}
+
+.head {
+    background: #29bde0;
+    padding: 5%;
+    font-size: 0.3rem;
+    color: white;
+    text-align: center;
+    display: flex;
+}
+
+.top-left,
+.top-right,
+.vote {
+    flex: 1;
+}
+/*.top-left {*/
+    /*position: absolute;*/
+/*}*/
+
+
+/*.head a{*/
+    /*color: white;*/
+    /*position: absolute;*/
+/*}*/
+
+.vote {
+    padding: 0 30%;
+    padding-top: 8px;
+}
+.title {
+    padding-left: 2%;
+}
+.main-audio {
+    background: #b9e9f5;
+    /*padding: 2.8%;*/
+    line-height: 1rem;
+    font-size: 0.25rem;
+    margin: 0 1px;
+}
+.head2 {
+    margin-top: -0.1%;
+    margin-left: 10%;
+    width: 0;
+    height: 0;
+    border-left: 0.1rem solid rgba(113, 51, 51, 0);
+    border-right: 0.1rem solid transparent;
+    border-top: 0.1rem solid #b9e9f5;
+}
+.voice {
+    border: none;
+    float: right;
+    background: #b9e9f5;
+    line-height: .5rem;
+    padding-top: .25rem;
+    padding-right: .3rem;
+}
+.p1 {
+    margin: 0;
+    color: white;
+    font-size: 0.2rem;
+    padding: 0.2rem 0.8rem;
+}
+main {
+    padding-top: 2.5rem;
+    padding-bottom: 1.5rem;
+}
+.content {
+    background-color: #29bde0;
+    overflow: hidden;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+.content-box {
+    width: 27%;
+    float: left;
+    margin: 3%;
+}
+.content-box1 {
+    background: #f5c97b;
+    border: 4px solid white;
+}
+.content1 {
+    text-align: center;
+    font-size: 0.4rem;
+    padding: 18%;
+}
+.box1 {
+    text-align: center;
+    font-size: 0.2rem;
+    background: #83b09a;
+    margin: 0;
+    color: #ffffff;
+}
+.tp{
+    width: 100%;
+    margin-top: 10%;
+    opacity: 0;
+}
+
+.content-box:hover .tp{
+    opacity:1;
+}
+/*foot*/
+footer{
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    position: fixed;
+    bottom: 0;
+
+}
+
+.button{
+    background: #29bde0;
+
+}
+.foot-button{
+    width: 80%;
+    margin: 5% 10%;
+    padding: 3%;
+    background: #fbb435;
+    font-size: 0.4rem;
+    color: white;
+    border: 0;
+}

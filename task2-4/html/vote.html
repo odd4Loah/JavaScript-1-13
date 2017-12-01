@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>投票页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script src="../js/jquery.min.js"></script>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/main-vote.css" rel="stylesheet">
+    <script src="../js/bootstrap.min.js"></script>
+</head>
+<body>
+<header>
+    <div class="head">
+        <a href="#" class="top-left">
+            <img src="../img/menu.png" alt="" style="transform: scale(.5,.5)">
+        </a>
+        <span class="vote">投票</span>
+        <a href="../index.html" class="top-right">
+            <img src="../img/close.png" alt="" style="transform: scale(.5,.5)">
+        </a>
+    </div>
+    <div class="main-audio">
+        <span class="title">发言讨论结束，请大家投票</span>
+        <audio src="../audio/Straight-Fire-Gang.flac" controls="controls" preload id="music" hidden>
+        </audio>
+        <button class="voice" onclick="a();"><img src="../img/audio.png" style="width: 0.5rem;height: 0.5rem;"></button>
+        <script>
+            function a(){
+                var audio = document.getElementById('music');
+                if(audio.paused){
+                    audio.play();//audio.play();// 播放
+                }
+                else{
+                    audio.pause();// 暂停
+                }
+            }
+        </script>
+    </div>
+    <div class="head2">
+        <div></div>
+    </div>
+    <p class="p1">点击得票数最多人的头像</p>
+</header>
+<main>
+    <div class="content">
+        <div class="content-box">
+            <div class="content-box1">
+                <p class="content1">水民</p>
+                <p class="box1">1号</p>
+            </div>
+            <img class="tp" src="../img/skill.png">
+        </div>
+        <div class="content-box">
+            <div class="content-box1">
+                <p class="content1">水民</p>
+                <p class="box1">2号</p>
+            </div>
+            <img class="tp" src="../img/skill.png">
+        </div>
+        <div class="content-box">
+            <div class="content-box1">
+                <p class="content1">警察</p>
+                <p class="box1">3号</p>
+            </div>
+            <img class="tp" src="../img/skill.png">
+        </div>
+        <div class="content-box">
+            <div class="content-box1">
+                <p class="content1">法官</p>
+                <p class="box1">4号</p>
+            </div>
+            <img class="tp" src="../img/skill.png">
+        </div>
+        <div class="content-box">
+            <div class="content-box1">
+                <p class="content1">猎人</p>
+                <p class="box1">5号</p>
+            </div>
+            <img class="tp" src="../img/skill.png">
+        </div>
+        <div class="content-box">
+            <div class="content-box1">
+                <p class="content1">医生</p>
+                <p class="box1">6号</p>
+            </div>
+            <img class="tp" src="../img/skill.png">
+        </div>
+        <div class="content-box">
+            <div class="content-box1">
+                <p class="content1">杀手</p>
+                <p class="box1">7号</p>
+            </div>
+            <img class="tp" src="../img/skill.png">
+        </div>
+        <div class="content-box">
+            <div class="content-box1">
+                <p class="content1">水民</p>
+                <p class="box1">8号</p>
+            </div>
+            <img class="tp" src="../img/skill.png">
+        </div>
+        <div class="content-box">
+            <div class="content-box1">
+                <p class="content1">水民</p>
+                <p class="box1">9号</p>
+            </div>
+            <img class="tp" src="../img/skill.png">
+        </div>
+        <div class="content-box">
+            <div class="content-box1">
+                <p class="content1">水民</p>
+                <p class="box1">10号</p>
+            </div>
+            <img class="tp" src="../img/skill.png">
+        </div>
+        <div class="content-box">
+            <div class="content-box1">
+                <p class="content1">水民</p>
+                <p class="box1">11号</p>
+            </div>
+            <img class="tp" src="../img/skill.png">
+        </div>
+        <div class="content-box">
+            <div class="content-box1">
+                <p class="content1">杀手</p>
+                <p class="box1">12号</p>
+            </div>
+            <img class="tp" src="../img/skill.png">
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="button">
+        <a href="./result.html">
+            <button class="foot-button">投死</button>
+        </a>
+    </div>
+</footer>
+
+
+
+<script>
+    function Rem() {
+        var docEI = document.documentElement,
+            oSize = docEI.clientWidth/7.2;
+        if(oSize > 100){
+            oSize = 100;
+        }
+        docEI.style.fontSize = oSize + 'px';
+    }
+    window.addEventListener('resize',Rem,false);
+    Rem()
+</script>
+</body>
+</html>

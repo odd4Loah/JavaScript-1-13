@@ -1,52 +1,40 @@
-$border:1px solid;
-
 body {
-  background-color: #f0f0f0;
-}
+  background-color: #f0f0f0; }
 
 main {
-  padding-top: 4rem;
-}
+  padding-top: 4rem; }
 
-//set players
 .main-top-select {
-  margin: 10px;
-}
+  margin: 10px; }
+
 .main-title,
 .main-role {
   background-color: #ffffff;
   text-align: center;
   padding: 10px;
-  /*border-bottom: 1px solid #eaeaea;*/
-}
+  /*border-bottom: 1px solid #eaeaea;*/ }
+
 .main-title {
-  border-bottom: $border #eaeaea;
-  padding: 20px 0;
-}
+  border-bottom: 1px solid #eaeaea;
+  padding: 20px 0; }
+
 .main-role {
   background-color: #fbfbfb;
   /*margin: 5px 0 10px 0;*/
-  padding: 0;
-}
-.role-box {
-  //border-bottom: $border #eaeaea;
-  padding: 1.5rem;
-  height: 23rem;
+  padding: 0; }
 
-}
+.role-box {
+  padding: 1.5rem;
+  height: 23rem; }
 
 .dynamic {
-  //flex: 1;
-  font-size: 2.6rem;
-  //padding: 0 10rem;
-}
-.dynamic-role {
-  color: #fbb435;
-}
-.dynamic-num {
-  color: #999999;
-}
+  font-size: 2.6rem; }
 
+.dynamic-role {
+  color: #fbb435; }
+
+.dynamic-num {
+  color: #999999; }
 
 .role-set {
   padding: 10px;
@@ -54,59 +42,55 @@ main {
   background-color: #fbfbfb;
   color: #29bde0;
   cursor: pointer;
-  border: $border transparent;
-  width: 100%;
-}
+  border: 1px solid transparent;
+  width: 100%; }
+
 .role-set:after {
   content: url("img/set.png");
-  padding-left: 5px;
-}
+  padding-left: 5px; }
 
 /*input keywords*/
-
 .main-mid-input {
   display: flex;
   align-items: center;
   background-color: #ffffff;
-  margin: 10px;
-}
+  margin: 10px; }
+
 .input-words {
   width: 100%;
-  border: $border #ffffff;
-  border-bottom: $border #eaeaea;
+  border: 1px solid #ffffff;
+  border-bottom: 1px solid #eaeaea;
   padding: 10px;
   margin: 27px 10px;
-  font-size: 16px;
-}
+  font-size: 16px; }
 
 /*select player number*/
-
 .main-foot-role-num {
-  //display: inline-block;
-  border: $border #eaeaea;
+  border: 1px solid #eaeaea;
   font-size: 25px;
   margin: 10px;
   padding: 10px 10px 80px 10px;
-  background-color: #ffffff;
-}
+  background-color: #ffffff; }
+
 .main-foot-role-num > input {
   width: 50px;
-  height: 30px;
-}
+  height: 30px; }
+
 .regulator {
-  margin: 0 auto;
-}
+  margin: 0 auto; }
+
 .regulator > button {
   color: #fab344;
   background-color: #ffffff;
-  border: $border #f0f0f0;
-  padding: 2px 4px;
-}
+  border: 1px solid #f0f0f0;
+  padding: 2px 4px; }
 
-input[type = range] {
+input[type=range] {
   vertical-align: middle;
   width: 60%;
   display: inline-block;
-  text-align: center;
-}
+  text-align: center; }
+
 /*#fab344--orange*/
+
+/*# sourceMappingURL=main-setplayer.css.map */

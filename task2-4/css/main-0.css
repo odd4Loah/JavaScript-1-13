@@ -37,6 +37,7 @@ header {
 .top-tips {
     transform: scale(.6,.6);
     right: 2vw;
+    top: .5vw;
 }
 
 .box-mid {
@@ -69,7 +70,7 @@ footer {
 
 .foot-function {
     flex: 1;
-    font-size: 2rem;
+    font-size: 2.5rem;
     background-color: #fbb435;
     border-radius: .5rem;
     margin: 1rem;

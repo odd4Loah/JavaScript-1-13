@@ -85,7 +85,7 @@ function setPlayerNumber() {
     var randomRole = '';
     for (x = 0; x < roleNumber.value; x++) {
             randomRole
-            += '<div class="dynamic">'
+            += '<div class="dynamic col-xs-6">'
                 + '<span class="dynamic-role">'
                     + q[x]
                 + '</span >'
@@ -95,31 +95,29 @@ function setPlayerNumber() {
                 + '号</span>'
             + '</div>';
     }
-
-    // var a = document.getElementsByClassName('list-style');
-
     $(".list-style").eq(0).html(randomRole);
 
-
-    // var setRole = document.getElementById('playerNum').value;
-    // // alert(setRole);
 }
 
+var divStyle = document.getElementById('role-list').style;             //必须使用ID来定义
 
+divStyle.cssText =
+                 //   'display: flex; '
+                 // + 'flex-wrap: wrap; '
+                 // + 'width: 50%; '
+                 + 'overflow: hidden; ';
 
 //利用创建dom，把平民、杀手人数加入到ul中
 
-// function setPlayerNumber() {
-//
-//     for (z = 1; z <= roleNumber.value; z++ ) {
-//         var farm = document.createElement("li");
-//         var node = document.createTextNode( z + '号' + );
-//         farm.appendChild(node);
-//
-//         var element = document.getElementById("role-list");
-//         element.appendChild(farm);
-//     }
-//
-//
-// }
+
+function playingCards() {
+
+    if (killer.length !== 0 ) {
+
+        window.location.href = '../html/assignRole.html';
+    } else {
+        alert('请分配玩家身份!');
+
+    }
+}
 

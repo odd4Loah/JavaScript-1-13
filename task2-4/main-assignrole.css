@@ -19,7 +19,7 @@ main {
   background-color: #ffedc5;
   text-align: center; }
 
-.card-bgc::before {
+.play-step-num {
   position: relative;
   top: -27px;
   display: block;
@@ -38,17 +38,10 @@ main {
   margin: 3px auto 20px auto;
   z-index: 10; }
 
-.card-bgc::after {
-  content: url(img/pre-flop.png);
-  position: absolute;
-  left: 0;
-  z-index: 1;
-  width: 100%;
-  border-radius: 10px;
-  transform: scale(0.7, 0.7); }
-
-.card-icon {
-  transform: scale(0.5, 0.5); }
+.card-icon-role > p {
+  padding-top: 1.2rem;
+  font-size: 2.4rem;
+  color: #29bde0; }
 
 footer {
   background-color: #29bde0;

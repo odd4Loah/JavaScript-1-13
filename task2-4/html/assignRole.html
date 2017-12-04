@@ -32,14 +32,24 @@
 <main>
     <div class="card-show">
         <div class="card-bgc">
-            <!--<img class="card-icon" src="../img/pre-flop.png" alt="">-->
-
+            <div class="play-step-num">
+                <p class="num-x"></p>
+            </div>
+            <div class="card-icon">
+                <img class="" src="../img/pre-flop.png" alt="">
+            </div>
+            <div class="card-icon-role">
+                <img class="" src="../img/aft-flop.png" alt="">
+                <p>角色：<span class="killer-farmer">''</span></p>
+            </div>
         </div>
     </div>
 </main>
 
 <footer>
-    <button class="foot-function" type="button" onclick="checkRole()">查看1号身份</button>
+    <button id="check" class="foot-function" type="button" onclick="checkRole()">查看<span class="num-y"></span>号身份</button>
+    <button id="send" class="foot-function" type="button" onclick="sendRole()">隐藏并传递给 <span class="num-z"></span>号</button>
+    <button id="result" class="foot-function" type="button" onclick="window.location.href('../html/')">查看法官日志</button>
 </footer>
 <script src="../js/assignRole.js"></script>
 </body>

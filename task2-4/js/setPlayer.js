@@ -105,9 +105,9 @@ divStyle.cssText =
 
 function playingCards() {
     if (killer.length !== 0 ) {
-        sessionStorage.setItem('playerRoleTrans', JSON.stringify(q));
+        sessionStorage.setItem('playerRoleTrans', JSON.stringify(q));       //储存玩家角色属性
         console.log(q);
-        sessionStorage.setItem('playBar', roleBar.value);
+        sessionStorage.setItem('playBar', roleBar.value);                   //储存玩家号码属性
         window.location.href = '../html/assignRole.html';
     } else {
         alert('请分配玩家身份!');

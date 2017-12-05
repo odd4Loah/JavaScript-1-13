@@ -43,11 +43,10 @@
 
 if (!Array.prototype.shuffle) {
     Array.prototype.shuffle = function() {
-        for (var j, x, i = this.length; i; j = parseInt(Math.random() * i) {
+        for (var j, x, i = this.length; i; j = parseInt(Math.random() * i),
             //解析一个字符串，并返回一个整数
             x = this[--i], this[i] = this[j], this[j] = x);
             return this;
-        }
     };
 }
 

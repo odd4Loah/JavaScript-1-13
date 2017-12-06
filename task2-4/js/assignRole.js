@@ -3,8 +3,21 @@
  */
 
 //获取上一个页面储存的数据并用到这个页面
-var playBoy = JSON.parse(sessionStorage.getItem('playerRoleTrans'));
-var playNum = window.sessionStorage.getItem('playBar');
+var playBoy = JSON.parse(sessionStorage.getItem('playerRoleTrans'));        //获取玩家角色属性
+// var myTest = [];
+// for(var i in myTest) {
+//     obj666 = {
+//         identity : playBoy[i]
+//     }
+//     myTest.push(obj666);
+// }
+// console.log(myTest[2].identity);
+// // alert(myTest[2].identity);
+
+
+
+
+var playNum = window.sessionStorage.getItem('playBar');                     //获取玩家号码属性
 console.log(playBoy);
 console.log(playNum);
 

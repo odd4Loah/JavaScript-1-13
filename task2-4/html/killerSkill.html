@@ -8,19 +8,19 @@
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/base.css">
     <link href="../css/main-0.css" rel="stylesheet">
-    <link rel="stylesheet" href="../main-judgeLog.css">
+    <link rel="stylesheet" href="../main-killer-skill.css">
     <script src="../js/bootstrap.min.js"></script>
 </head>
 <body>
 <header>
     <div class="box-lf">
-        <div onclick="backToSetPage()">
+        <div onclick="back()">
             <div class="top-home">
                 <img src="../img/back-icon.png" alt="">
             </div>
         </div>
     </div>
-    <div class="box-mid"><span>法官日志</span></div>
+    <div class="box-mid"><span>杀手刀人</span></div>
     <div class="box-rit">
         <a href="#" >
             <div class="top-tips">
@@ -30,23 +30,20 @@
     </div>
 </header>
 <main>
+    <div class="killer-tips">
+        <span>杀手请睁眼，杀手请选择要杀死的对象</span>
+    </div>
+    <div class="killer-arrow"></div>
+    <p class="mark-player">点击下方玩家头像，对被杀的玩家进行标记</p>
     <div class="content">
-        <div class="content-box">
-            <!--<div class="content-box1">-->
-                <!--<p class="content1"></p>-->
-            <!--</div>-->
-            <!--<div class="content-box2">-->
-                <!--<p class="number1"></p>-->
-            <!--</div>-->
-            <!--<img class="tp" src="../img/skill.png">-->
-        </div>
+        <div class="content-box"></div>
     </div>
 </main>
 
 <footer>
     <button id="result" class="foot-function" type="button" onclick="window.location.href = ('../html/startGame.html')">
-        开始游戏</button>
+        确定</button>
 </footer>
-<script src="../js/judgeLog.js"></script>
+<script src="../js/killerSkill.js"></script>
 </body>
 </html>

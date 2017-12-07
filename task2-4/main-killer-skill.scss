@@ -1,0 +1,67 @@
+$border: 1px solid;
+
+main {
+  background-color: #29bde0;
+  height: 45rem;
+  position: relative;
+  top: 4rem;
+}
+.killer-tips {
+  background: #b9e9f5;
+  padding: 2% 2.8% 2% 5.5%;
+  line-height: 1rem;
+  font-size: 2.5rem;
+  margin: 0 1px;
+}
+.killer-arrow {
+  margin-top: -0.9%;
+  margin-left: 6%;
+  width: 0;
+  height: 0;
+  border-left: 1rem solid rgba(113, 51, 51, 0);
+  border-right: 1rem solid transparent;
+  border-top: 1rem solid #b9e9f5;
+}
+.mark-player {
+  margin: 0;
+  color: white;
+  font-size: 1.4rem;
+  padding-left: 5.5%;
+}
+.content {
+  background-color: #29bde0;
+  overflow: hidden;
+  //padding-top: 20px;
+  padding-bottom: 10px;
+  margin-bottom: 4rem;
+  //display: flex;
+  //flex-wrap: wrap;
+}
+.content-box {
+  //width: 27%;
+  margin: 3%;
+}
+.content-box1 {
+  //flex: 0 0 50%;
+  float: left;
+  margin: 3%;
+  background: #f5c97b;
+  border: 4px solid white;
+}
+.content1 {
+  text-align: center;
+  font-size: 2rem;
+  padding: 58px;
+  cursor: pointer;
+}
+.number1 {
+  text-align: center;
+  font-size: 1.6rem;
+  background: #83b09a;
+  margin: 0;
+  color: #ffffff;
+}
+
+footer {
+  background: #29bde0;
+}

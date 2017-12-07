@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>法官日志</title>
+    <title>天黑请闭眼</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <script src="../js/jquery.min.js"></script>
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/base.css">
     <link href="../css/main-0.css" rel="stylesheet">
-    <link rel="stylesheet" href="../main-judgeLog.css">
+    <link rel="stylesheet" href="../main-startGame.css">
     <script src="../js/bootstrap.min.js"></script>
 </head>
 <body>
@@ -20,7 +20,7 @@
             </div>
         </div>
     </div>
-    <div class="box-mid"><span>法官日志</span></div>
+    <div class="box-mid"><span>法官本子</span></div>
     <div class="box-rit">
         <a href="#" >
             <div class="top-tips">
@@ -29,24 +29,30 @@
         </a>
     </div>
 </header>
+
 <main>
-    <div class="content">
-        <div class="content-box">
-            <!--<div class="content-box1">-->
-                <!--<p class="content1"></p>-->
-            <!--</div>-->
-            <!--<div class="content-box2">-->
-                <!--<p class="number1"></p>-->
-            <!--</div>-->
-            <!--<img class="tp" src="../img/skill.png">-->
-        </div>
+    <div class="x-day">
+        <p class="day-by-day">第一天</p>
+    </div>
+    <div class="day-arrow">
+
+    </div>
+    <div class="game-process">
+        <!--<div class="game-step-before"></div>-->
+        <button class="game-step" onclick="killerAction()">杀手请杀人</button>
+
+        <button class="game-step">亡灵发表遗言</button>
+        <button class="game-step">玩家轮流发言</button>
+        <button class="game-step">全民投票</button>
+
     </div>
 </main>
 
 <footer>
-    <button id="result" class="foot-function" type="button" onclick="window.location.href = ('../html/startGame.html')">
-        开始游戏</button>
+    <button class="foot-game-over">结束游戏</button>
+    <button class="foot-judge-log">法官日志</button>
 </footer>
-<script src="../js/judgeLog.js"></script>
+
+<script src="../js/startGame.js"></script>
 </body>
 </html>

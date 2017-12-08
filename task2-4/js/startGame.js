@@ -15,5 +15,5 @@ function killerAction() {
 
 
 function backToSetPage() {
-    window.location.href = '../html/judgeLog.html';
+    window.location.href = '../html/setPlayer.html';
 }

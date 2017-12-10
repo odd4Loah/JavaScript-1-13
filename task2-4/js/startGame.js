@@ -74,7 +74,6 @@ function Click3() {
 //     });
 // }
 
-
 //点击后进入杀手杀人界面
 function Click1() {
     var role = 0;

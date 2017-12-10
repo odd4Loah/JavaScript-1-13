@@ -45,7 +45,11 @@ main {
   text-align: center;
   font-size: 2rem;
   padding: 58px;
-  cursor: pointer; }
+  cursor: pointer;
+  background: #f5c97b; }
+
+.dead-color {
+  background-color: #000000; }
 
 .number1 {
   text-align: center;

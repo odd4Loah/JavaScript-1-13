@@ -32,22 +32,21 @@
 
 <main>
     <div class="x-day">
-        <p class="day-by-day">第一天</p>
+        <p class="day-by-day"></p>
     </div>
     <!--<div class="day-arrow"></div>-->
     <div class="game-process">
         <!--<div class="game-step-before"></div>-->
-        <button class="game-step" onclick="killerAction()">杀手请杀人</button>
-
-        <button class="game-step">亡灵发表遗言</button>
-        <button class="game-step">玩家轮流发言</button>
-        <button class="game-step">全民投票</button>
+        <button class="game-step" id="killerAction" onclick="Click1()">杀手请杀人</button>
+        <button class="game-step" id="deadSpeak" onclick="Click2()">亡灵发表遗言</button>
+        <button class="game-step" id="aliveSpeak" onclick="Click3()">玩家轮流发言</button>
+        <button class="game-step" id="playerVote" onclick="Click4()">全民投票</button>
 
     </div>
 </main>
 
 <footer>
-    <button class="foot-game-over" onclick="backToSetPage()">结束游戏</button>
+    <button class="foot-game-over" onclick="restartGame()">结束游戏</button>
     <button class="foot-judge-log">法官日志</button>
 </footer>
 

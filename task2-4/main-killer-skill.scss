@@ -53,10 +53,14 @@ main {
   font-size: 2rem;
   padding: 58px;
   cursor: pointer;
+  background: #f5c97b;
 }
 //.content1:focus {
 //  background-color: #ffffff;
 //}
+.dead-color {
+  background-color: #000000;
+}
 
 .number1 {
   text-align: center;

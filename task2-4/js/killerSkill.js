@@ -11,10 +11,22 @@ for(var i in ider) {
 }
 // alert(myar[1].identity);
 console.log(myarr);
-
 console.log(myarr[2].state);
 // console.log(myarr[3].identity);
 // //页面初始化
+
+var title = window.sessionStorage.getItem('roleTime');
+if (title < 1) {
+    $('.get-one-man-out').html('杀人环节');
+    $('.foot-function').html('杀死他吧');
+    console.log(title);
+} else {
+    $('.get-one-man-out').html('投票环节');
+    $('.foot-function').html('投票出局');
+    console.log(title);
+}
+
+
 (function () {
     var gameRole = '';
     for (var x in myarr) {
@@ -32,24 +44,32 @@ console.log(myarr[2].state);
     $(".content-box").html(gameRole);
 }());
 
-//生者为黄，死者为黑
+//生者为黄，死者为红
 //点击角色头像改变其颜色
-
-$(".content1").click(function () {
+$(".content-box1").click(function () {
     // console.log($(this));       //$(this)是一个数组，数组是不能添加颜色的
-    console.log($(this)[0]);    //$(this)[0]是数组里第0个元素，是一个可以添加背景颜色的p标签
-    $(".content1").css('backgroundColor', '#f5c97b');
+    console.log($(this).index());    //$(this).index()是数组里元素索引
+    $(".content-box1").children(".content1").css('backgroundColor', '#f5c97b');
     //每次click先将所有颜色变为黄色
-    $($(this)[0]).css('backgroundColor', '#ff6c5c');
+    $(".content-box1").children(".content1").eq($(this).index()).css('backgroundColor', '#ff6c5c');
     //再将被点击的那个颜色变为红色
-
-    // if (myarr[1].state === 0 ) {
-    //     alert('55')
-    // } else {
-    //     alert("杀谁呢，小崽子！");
-    // }
+    stateIndex = $(this).index();
 });
 
+$('#result').on('click',function () {
+
+
+    if (2 > 0) {
+        myarr[stateIndex].state = 0;
+        console.log(myarr[stateIndex].state);
+        console.log(myarr);
+        sessionStorage.setItem('myArr',JSON.stringify(myarr));
+        // window.location.href = '../html/startGame.html';
+        console.log("有问题");
+    } else {
+        alert('不杀一个你今天就别走了');
+    }
+});
 
 
 // if (myarr[$(this)].state === 1 ) {

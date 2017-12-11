@@ -26,7 +26,7 @@ if (deadNums === null) {
 function unique1(array) {
     var n = []; //这是一个新的临时数组
     //遍历当前数组
-    for (var i = 0, len = array.length; i < len; i++) {
+    for (var i = 0; i < array.length; i++) {
         //如果当前数组的第i项已经保存进了临时数组，那么就跳过执行
         //否则把当前项push到临时数组里
         if (n.indexOf(array[i]) === -1)n.push(array[i]);
@@ -66,6 +66,7 @@ function Click3() {
     }
 }
 
+//如果杀手杀人背景颜色为蓝色就把他变灰色
 // if (firstBlood === 'rgb(41, 189, 224)') {
 //     $('#killerAction').css({
 //         'backgroundColor' : '#eaeaea',
@@ -87,7 +88,9 @@ function Click1() {
     sessionStorage.setItem('firstBlood', JSON.stringify(firstBlood));
     window.location.href = '../html/killerSkill.html';
 }
-
+//将杀手杀死的平民state：0传递到本页面
+var killed = JSON.parse(sessionStorage.getItem('myArr'));
+console.log(killed);
 //点击后进入全民投票环节
 function Click4() {
     var role = 1;

@@ -39,7 +39,7 @@ for (i = 0; i < playNum; i++) {
     var allPeople = $('.content1');
     console.log(allPeople);
     if (allPlayers[i].state === 0) {
-        $(allPeople[i].css('backgroundColor','#ff6c5c'));
+        $(allPeople[i]).css('backgroundColor','#ff6c5c');
     }
 }
 
@@ -63,8 +63,8 @@ for (var j = 0; j < playNum; j++) {
             //lastSelect是上次点击的玩家的数组下标；
             // 如果lastSelect !== undefined成立，说明之前点击了别的玩家，则将之前点击的玩家状态还原；
             if (lastSelect !== undefined) {
-                $(allPeople[lastSelect]).css('backgroundColor','#f5c97b');
                 allPlayers[lastSelect].state = 1;
+                $(allPeople[lastSelect]).css('backgroundColor','#f5c97b');
             }
             $(allPeople[this.index]).css('backgroundColor','#ff6c5c');  //将当前点击的玩家的背景色更改
             allPlayers[this.index].state = 0;                           //将当前点击的玩家的状态更改
@@ -72,13 +72,14 @@ for (var j = 0; j < playNum; j++) {
             lastSelect = this.index;                                    //获取当前点击的玩家的数组下标
             //这三项是用来判断：如果玩家改变杀死的人时，就将之前选择的玩家的背景色还原，状态还原
         }
+        console.log(deadNums);
     }
 }
 var killer = 0;
 var farmer = 0;
 function outSomebody() {
-    var gg = JSON.parse(sessionStorage.getItem('allPlayers'));
-    console.log(gg);
+
+    sessionStorage.setItem("allPlayers",JSON.stringify(allPlayers));
     for (var n = 0; n < playNum; n++) {
         if (allPlayers[n].state = 1) {
             if (allPlayers[n].id === '杀手') {
@@ -86,15 +87,17 @@ function outSomebody() {
             } else {
                 farmer++;
             }
-            console.log(killer);
         }
     }
-    //
-    if (killer === farmer) {
-        var ss = 2;
-        sessionStorage.setItem('ss',JSON.stringify(ss));
-        alert("游戏结束，杀手胜利！");
+    ////循环判断玩家对象中，所有活着的杀手和平民的数量，再比较两者的数量，跳转到对应页面；
+    if (killer >= farmer) {
+        var result = 2;
+        sessionStorage.setItem('result',JSON.stringify(result));
+        window.location.href = '../html/result.html'
+    } else {
+        window.location.href = '../html/startGame.html'
     }
+    console.log(killer);
 }
 //allPlayers是玩家所有属性的键值对
 //allPeople是获取杀手和平民所在的类的dom节点

@@ -15,7 +15,7 @@ console.log(allPlayers);
 var title = window.sessionStorage.getItem('roleTime');
 if (title < 1) {
     $('.get-one-man-out').html('杀人环节');
-    $('.foot-function').html('杀死他吧');
+    $('.foot-function').html('杀死平民');
     console.log(title);
 } else {
     $('.get-one-man-out').html('投票环节');
@@ -72,6 +72,28 @@ for (var j = 0; j < playNum; j++) {
             lastSelect = this.index;                                    //获取当前点击的玩家的数组下标
             //这三项是用来判断：如果玩家改变杀死的人时，就将之前选择的玩家的背景色还原，状态还原
         }
+    }
+}
+var killer = 0;
+var farmer = 0;
+function outSomebody() {
+    var gg = JSON.parse(sessionStorage.getItem('allPlayers'));
+    console.log(gg);
+    for (var n = 0; n < playNum; n++) {
+        if (allPlayers[n].state = 1) {
+            if (allPlayers[n].id === '杀手') {
+                killer++;
+            } else {
+                farmer++;
+            }
+            console.log(killer);
+        }
+    }
+    //
+    if (killer === farmer) {
+        var ss = 2;
+        sessionStorage.setItem('ss',JSON.stringify(ss));
+        alert("游戏结束，杀手胜利！");
     }
 }
 //allPlayers是玩家所有属性的键值对

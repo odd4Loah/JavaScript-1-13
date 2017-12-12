@@ -5,15 +5,16 @@
 //获取之前页面储存的玩家号码，角色，并用到这个页面
 var playNum = window.sessionStorage.getItem('playBar');
 var day = JSON.parse(sessionStorage.getItem('dayTime'));
-var firstBloodX = JSON.parse(sessionStorage.getItem('firstBloodX'));
+var c1 = JSON.parse(sessionStorage.getItem('c1'));
 var deadNums = JSON.parse(sessionStorage.getItem('deadNums'));
 var deadNum = JSON.parse(sessionStorage.getItem('deadNum'));
+var allPlayers=JSON.parse(sessionStorage.getItem('allPlayers'));
 // var playBoy = JSON.parse(sessionStorage.getItem('playerRoleTrans'));
 // console.log(playBoy);
 
 console.log(playNum);
 console.log(day);
-console.log(firstBloodX);
+// console.log(c1);
 console.log(deadNums);
 // console.log(deadNum);
 
@@ -36,38 +37,56 @@ function unique1(array) {
     return n;
 }
 unique1(deadNum);
+
 sessionStorage.setItem('n',JSON.stringify(n));
 sessionStorage.setItem("deadNum",JSON.stringify(deadNum));
 console.log(deadNum);
+
 $('.day-by-day').html('第' + day + '天');
 // console.log(day);
-
-//如果杀手杀人背景颜色为蓝色就把他变灰色
-
+//
+//forEach遍历数组，打印死亡人数
+var deadPerson = 0;
+allPlayers.forEach(function (item,index) {
+    console.log(item.state);
+    if (item.state === 0) {
+        deadPerson++;
+    }
+});
+console.log(deadPerson);
+//判断死亡人数是否能被整除，能整除是刚投了票，保持蓝色；不能整除就是刚杀了人，保持灰色
+if (deadPerson % 2 === 0) {
+    console.log('能整除是投了票，可以进入下一天了！');
+} else {
+    if (c1 === 'rgb(41, 189, 224)') {  //蓝色
+        $('#killerAction').css({
+            'backgroundColor' : '#eaeaea',  //变灰色
+            'pointerEvents' : 'none',   //元素永远不会成为鼠标事件的目标
+            'cursor' : 'notAllowed'     //一个红色的圈加一个斜杠,不可点击
+        });
+    }
+    console.log('不能整除就是刚杀了人，杀手按钮保持灰色');
+}
 
 //点击后进入杀手杀人界面
 function Click1() {
     var role = 0;
-    var firstBlood = $('#killerAction').css('backgroundColor');
-    window.sessionStorage.setItem('roleTime', role);
-    $('#killerAction').css({
-        'backgroundColor' : '#eaeaea',
-        'pointerEvents' : 'none',   //元素永远不会成为鼠标事件的目标
-        'cursor' : 'notAllowed'     //一个红色的圈加一个斜杠,不可点击
-    });
-    sessionStorage.setItem('firstBloodX', JSON.stringify(firstBlood));
-    if (firstBloodX === 'rgb(41, 189, 224)') {
+    var c = $('#killerAction').css('backgroundColor');
+        window.sessionStorage.setItem('roleTime', role);
         $('#killerAction').css({
             'backgroundColor' : '#eaeaea',
             'pointerEvents' : 'none',   //元素永远不会成为鼠标事件的目标
             'cursor' : 'notAllowed'     //一个红色的圈加一个斜杠,不可点击
         });
-    }
-    window.location.href = '../html/killerSkill.html';
+        sessionStorage.setItem('c1', JSON.stringify(c));
+        console.log(c);
+        window.location.href = '../html/killerSkill.html';
 }
 
 var afterKill = JSON.parse(sessionStorage.getItem('allPlayers'));
 console.log(afterKill);
+
+
 //点击后请亡灵发言
 function Click2() {
     if ($('#killerAction').css('backgroundColor') === 'rgb(41, 189, 224)') {
@@ -95,10 +114,6 @@ function Click3() {
     }
 }
 
-
-
-
-
 //将杀手杀死的平民state：0传递到本页面
 // var killed = JSON.parse(sessionStorage.getItem('myArr'));
 // console.log(killed);
@@ -108,7 +123,7 @@ function Click4() {
     if ($('#aliveSpeak').css('backgroundColor') === 'rgb(41, 189, 224)') {
         alert('一步一步来啊小胸弟');
     } else {
-        window.location.href = '../html/killerSkill.html';
+        window.location.href = '../html/aliveVote.html';
         window.sessionStorage.setItem('roleTime',role);
         $('#playerVote').css({
             'backgroundColor' : '#eaeaea',
@@ -118,11 +133,10 @@ function Click4() {
     }
 }
 
-
 function restartGame() {
     if (confirm('确定要重玩么？')) {
         sessionStorage.removeItem(
-         'result','firstBloodX',
+         'result','c1',
          'deadNums','deadNums',
          'role','allPlayers',
          'playerRoleTrans',
@@ -130,9 +144,6 @@ function restartGame() {
          'roleTime','allPeople',
          'myArr'
          );
-
         window.location.href = '../html/setPlayer.html';
     }
-
-
 }

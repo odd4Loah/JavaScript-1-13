@@ -147,3 +147,6 @@ function restartGame() {
         window.location.href = '../html/setPlayer.html';
     }
 }
+function logNote() {
+    window.location.href = '../html/logNote.html';
+}

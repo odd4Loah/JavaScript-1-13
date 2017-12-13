@@ -73,7 +73,7 @@ function shuffle(array) {
 }
 
 //点击设置--获取input内的玩家数量
-var _array = new Array;
+var _array = [];
 var q;
 
 function setPlayerNumber() {

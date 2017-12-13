@@ -54,16 +54,16 @@ main {
 .main-img {
     flex: 1;
     text-align: center;
-    transform: scale(.5,.5);
+    transform: scale(.7,.7);
 }
 
 .main-title,
 .main-text {
-    font-size: 1.6rem;
     margin: 0 15vw;
 }
-h2 {
-    font-size: 1.6rem;
+.main-title > h2 {
+    text-align: center;
+    font-size: 2rem;
     color: #ffc865;
     text-shadow: #aec493;
 }
@@ -76,8 +76,9 @@ h2 {
     letter-spacing: .1rem;
 }
 
-.main-text span {
+.main-text > span {
     padding-right: 1.5rem;
+    font-size: 1.5rem;
 }
 
 /*main-过程*/
@@ -90,7 +91,7 @@ h2 {
     background-color: #ffffff;
     padding: 1vw 15vw;
     border-bottom: .1rem solid #eaeaea;
-    padding-bottom: 1rem;
+    padding-bottom: 8rem;
 
 }
 .main-time {
@@ -113,7 +114,7 @@ h2 {
 .main-night {
     color: #a6a6a6;
     width: 100%;
-
+    font-size: 2.2rem;
 }
 
 
@@ -137,19 +138,18 @@ footer {
     background-color: rgba(41,189,224,0.4);
 }
 
-.foot-again,
-.foot-upload {
+.foot-game-over,
+.foot-judge-log {
     flex: 1;
-    font-size: 3rem;
-    border: .1rem solid #29bde0;
+    font-size: 2rem;
     background-color: #fbb435;
     border-radius: .5rem;
     margin: 1rem;
     color: #ffffff;
-    text-decoration: none;
+    border: 1px solid transparent;
 }
 
-.foot-again {
+.foot-judge-log {
     background-color: #f66f6f;
 }
 

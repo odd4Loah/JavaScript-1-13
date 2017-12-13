@@ -100,7 +100,7 @@ function outSomebody() {
             sessionStorage.setItem('result',JSON.stringify(result));
             alert('好人获胜！');
             window.location.href = '../html/result.html';
-        } else if (killer === farmer) {
+        } else if (killer >= farmer) {
             alert('杀手获胜！');
             window.location.href = '../html/result.html';
         } else {

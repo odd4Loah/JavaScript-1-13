@@ -59,7 +59,7 @@ for (var j = 0; j < playNum; j++) {
             if (allPlayers[this.index].state === 0) {
                 alert('请不要鞭尸，谢谢');
             } else {
-                alert('杀谁呢，小崽子！');
+                alert('死吧，虫子！');
             }
         } else {
             //lastSelect是上次点击的玩家的数组下标；
@@ -96,9 +96,10 @@ function outSomebody() {
     if (lastSelect === undefined) {
         alert('不杀人，还想溜！');
     } else {
-        if (killer === farmer) {
+        if (killer >= farmer) {
             var result = 2;
             sessionStorage.setItem('result',JSON.stringify(result));
+            alert('杀手完全胜利！');
             window.location.href = '../html/result.html';
         } else {
             window.location.href = '../html/startGame.html';

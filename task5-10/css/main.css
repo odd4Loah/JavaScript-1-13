@@ -1,0 +1,23 @@
+body {
+    background-image: url("../img/wallhaven-598540.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.login-bgc {
+    /*background: url("../img/cock.ico");*/
+}
+.log-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.log-table {
+    margin-top: 20vw;
+    text-align: center;
+    border-radius: 1%;
+    /*border: 1px solid #ff7f00;*/
+    background-color: #ffffff;
+    opacity: 0.8;
+    padding: 25px;
+}

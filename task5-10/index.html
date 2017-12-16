@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>东北里</title>
     <link rel="icon" href="img/cock.ico" type="image/x-icon">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
@@ -11,17 +13,19 @@
     <div class="login-bgc">
         <div class="container">
             <div class="row log-main">
-                <div class="log-table col-md-4 col-xs-4">
-                    <h4>EVA后台登录系统</h4>
+                <div class="log-table col-xs-9 col-sm-6 col-md-4 col-lg-4">
+                    <h4>信仰之跃后台登录系统</h4>
                     <div class="content1">
-                        <input type="text" placeholder="user">
+                        <input id="result1" class="write-user" type="text" name="Name" placeholder="user">
                     </div>
                     <div class="content1">
-                        <input type="password" placeholder="code">
+                        <input id="result2" class="write-code" type="password" name="Password" placeholder="code">
                     </div>
+                    <button class="btn login-btn" id="sign-in">登录</button>
                 </div>
             </div>
         </div>
     </div>
+    <script src="js/backLogin.js"></script>
 </body>
 </html>

@@ -11,7 +11,7 @@ $(document).ready(function () {
         console.log(user);
         console.log(code);
         var xmlhttp;
-        var params = {};//新建一个空的对象
+        var params = {};        //新建一个空的对象
         params.name=$('#result1').val();
         params.pwd=$('#result2').val();
         console.log(params);
@@ -19,9 +19,7 @@ $(document).ready(function () {
         if (window.XMLHttpRequest)
         {// code for IE7+, Firefox, Chrome, Opera, Safari
             xmlhttp = new XMLHttpRequest();
-        }
-        else
-        {// code for IE6, IE5
+        } else {// code for IE6, IE5
             xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
         }
         xmlhttp.onreadystatechange = function() {
@@ -31,8 +29,8 @@ $(document).ready(function () {
                 //判断input是否为空
                 if (user === "" || code === "") {
                     alert("请输入正确的用户名和密码！");
-                } else if (jsons.code === 0) {//网页响应成功
-                    window.location.href = "https://www.google.com"
+                } else if (jsons.code === 0) {      //网页响应成功
+                    window.location.href = "html/backEnd.html";
                 }
                 else {//提示
                     $('#alert1').html(jsons.message);
@@ -44,3 +42,7 @@ $(document).ready(function () {
         xmlhttp.send($.param(params));
     });
 });
+function keyLogin() {
+    if (event.keyCode === 13)  //回车键的键值为13
+        $('#sign-in').click(); //调用登录按钮的登录事件
+}

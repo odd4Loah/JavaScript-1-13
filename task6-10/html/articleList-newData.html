@@ -1,0 +1,119 @@
+
+<script src="../js/factory/constant.js"></script>
+<div class="info-search content-box0">
+    <div class="panel-body">
+        <div class="panel-heading table-border ">
+            <strong>{{id ? "编辑列表":"新增列表"}}</strong>
+        </div>
+        <div class="panel-body">
+            <form class="padding-10" name="form" novalidate="novalidate" >
+                <!--标题名称-->
+                <div class="form-group col-md-10">
+                    <label class="col-md-2 control-label label-title">标题名称</label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" name="title" required="required" ng-model="addParams.title">
+                        <span style="color: #ff0000" ng-show="form.title.$error.required && form.title.$touched">标题不能为空</span>
+                    </div>
+                </div>
+                <!--类型选择-->
+                <div class="form-group col-md-10">
+                    <label class="col-md-2 control-label label-title word-spacing-25">类 型</label>
+                    <div class="col-md-3">
+                        <select name="type" class="form-control" ng-model="addParams.type" ng-options="x.value as x.text for x in type" required="required">
+                            <option value="">请选择</option>
+                        </select>
+                        <span style="color:#ff0000;" ng-show="form.type.$error.required && form.type.$touched">必选项</span>
+                    </div>
+                    <div class="col-md-3">
+                        <select name="industry" class="form-control" ng-show="addParams.type == 3" ng-model="addParams.industry" ng-options="x.value as x.text for x in industry" required="required">
+                            <option value="">请选择</option>
+                        </select>
+                        <span style="color:#ff0000;" ng-show="addParams.type == 3 && form.industry.$error.required && form.industry.$touched">必选项</span>
+                    </div>
+                </div>
+                <!--跳转链接-->
+                <div class="form-group col-md-10">
+                    <label class="col-md-2 control-label label-title">跳转链接</label>
+                    <div class="col-md-8">
+                        <input type="url" class="form-control" name="url" required="required" ng-model="addParams.url">
+                        <span style="color: #ff0000" ng-show="form.url.$error.required && form.url.$touched">请填写链接</span>
+                        <span style="color: #ff0000" ng-show="form.url.$error.url">不符合URL格式</span>
+                    </div>
+                </div>
+                <!--配图-->
+                <div class="form-group col-md-10">
+                    <label class="col-md-2 control-label label-title word-spacing-25">配 图</label>
+                    <div class="col-md-8 col-box">
+                        <div class="col-md-12">
+                            <label name="file" for="file1" class="btn btn-primary" required>选择图片</label>
+                            <input type="file" id="file1"
+                                   style="display: none"
+                                   onchange="angular.element(this).scope().test()">
+                        </div>
+                        <div class="col-md-12 col-img">
+                            <img id="src" ng-src="{{src}}" alt="图片预览" style="max-height: 200px;">
+                        </div>
+                        <div class="col-md-12">
+                            <table class="table">
+                                <thead>
+                                <th>图片名称</th>
+                                <th>文件大小</th>
+                                <th>进度</th>
+                                <th>结果</th>
+                                <th>操作</th>
+                                </thead>
+                                <tbody>
+                                <tr ng-repeat="file in file">
+                                    <td><strong>{{file.name}}</strong></td>
+                                    <td>{{file.size/(1024*1024) | number : 2}}MB</td>
+                                    <td>
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" ng-style="{'width': progress + '%'}" style="width: 100%;"></div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span ng-show="show">
+                                            <i class="glyphicon glyphicon-ok"></i>
+                                        </span>
+                                        <span ng-show="hidden">
+                                            <i class="glyphicon glyphicon-remove"></i>
+                                        </span>
+                                    </td>
+                                    <td nowrap>
+                                        <button type="button" class="btn btn-primary btn-xs" ng-click="uploadFile()" ng-disabled="show">
+                                            <span class="glyphicon glyphicon-upload"></span>
+                                            上传
+                                        </button>
+                                        <button type="button" class="btn btn-warning btn-xs" ng-click="removeFile()">
+                                            <span class="glyphicon glyphicon-trash"></span>
+                                            删除
+                                        </button>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!--说明-->
+                <div class="form-group col-md-10">
+                    <label class="col-md-2 control-label label-title word-spacing-25">说 明</label>
+                    <div class="col-md-10">
+                        <div id="editor" class="editor-style">
+                            <p>请输入...</p>
+                        </div>
+                    </div>
+                </div>
+                <!--上线 | 草稿 | 取消-->
+                <div class="form-group col-md-12">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8 col-box">
+                        <button type="button" class="btn btn-primary" ng-click="upload(2)" ng-disabled="form.title.$error.required || form.type.$error.required || (addParams.type == 3 && form.industry.$error.required) || form.url.$error.required || form.url.$error.url || (!src)">立即上线</button>
+                        <button type="button" class="btn btn-primary" ng-click="upload(1)" ng-disabled="form.title.$error.required || form.type.$error.required || (addParams.type == 3 && form.industry.$error.required) || form.url.$error.required || form.url.$error.url || (!src)">存为草稿</button>
+                        <button type="button" class="btn btn-default pull-right" ng-click="cancel()">取消</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

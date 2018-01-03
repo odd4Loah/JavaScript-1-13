@@ -1,0 +1,175 @@
+
+body {
+    min-width: 320px;
+    background-color: #232a3a;
+}
+/*抬头*/
+.header {
+
+    font-size: 20px;
+    /*padding: 10px;*/
+    /*border-bottom: 1px solid #9d9d9d;*/
+    overflow: hidden;
+}
+
+
+.nav-title {
+    float: left;
+    width: 250px;
+    color: #ffffff;
+    background-color: #232a3a;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 600;
+    padding: 13px;
+    border-bottom: .5px solid #4a5f6c;
+}
+.nav-out {
+    /*width: 80%;*/
+    height: 54px;
+    box-shadow: 0 0 6px #e3e2e2;
+    border-color: #e3e2e2;
+    background-color: #ffffff;
+}
+.log-out {
+    float: right;
+    margin: 10px 30px;
+    /*color: #232a3a;*/
+}
+@media only screen and (min-width: 768px) {
+    .moblie-nav {
+        display: none;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .pc-nav {
+        display: none;
+    }
+}
+
+
+/*左侧导航栏*/
+.side-bar {
+    float: left;
+    width: 250px;
+    padding-top: 20px;
+    /*background-color: #232a3a;*/
+    color: #ffffff;
+}
+@media only screen and (min-width: 768px) {
+    .side-bar {
+        float: left;
+        width: 250px;
+        padding-top: 28px;
+        padding-bottom: 300px;
+        margin-bottom: -300px;
+    }
+}
+.nav-first-level {
+    color: #ffffff;
+}
+.clr-blk {
+    color: #000000;
+}
+.hand {
+    cursor: pointer;
+}
+.panel-default > .panel-heading {
+    color: #ffffff;
+    background-color: #232a3a;
+    border-color: #232a3a;
+    /*text-align: center;*/
+}
+.panel-body > a {
+    color: #232a3a;
+}
+
+/*右侧内容区域*/
+.content-box0 {
+    background-color: #f5f5f5;
+    /*border: 1px solid #ff7f00;*/
+}
+@media only screen and (min-width: 768px) {
+    .content-box0 {
+        float: left;
+        padding: 30px 30px 300px 30px;
+        margin-bottom: -300px;
+        width: calc(100% - 250px);
+    }
+}
+.info-search {
+
+}
+.content-area {
+    padding: 15px;
+
+}
+/*这个类的样式不能改了*/
+.panel-body {
+    padding: 15px;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+}
+.panel-heading {
+    background-color: #f5f5f5
+}
+.margin-bot-30 {
+    margin-bottom: 30px;
+}
+.row {
+
+}
+.wel {
+    /*text-align: center;*/
+    color: #ffffff;
+    font-size: 66px;
+}
+.title-img {
+    width: 768px;
+    height: 480px;
+    /*transform: scale(.5,.5);*/
+}
+/*列表样式*/
+.table-border {
+    border: 1px solid #dddddd;
+}
+.tac {
+    text-align: center;
+}
+
+.table th,
+.table td {
+    /*max-width: 30px;*/
+    text-align: center;
+    /*overflow: hidden;*/
+    /*text-overflow:ellipsis;*/
+    /*word-break: break-all;*/
+
+}
+.form-xs {
+    width: 40px;
+    line-height: 28px;
+}
+.margin-3 {
+    margin: 3px;
+}
+.margin-left-10 {
+    margin-left: 10px;
+}
+
+/*新增&编辑*/
+.content-field {
+    /*margin: 15px;*/
+}
+.label-title {
+    text-align: center;
+    margin-top: 5px;
+}
+.word-spacing-25 {
+    word-spacing: 25px;
+}
+.editor-style {
+    min-height: 200px;
+    z-index: 50!important;
+}

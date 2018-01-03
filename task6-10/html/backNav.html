@@ -1,0 +1,172 @@
+
+
+<div>
+    <div class="header nav ">
+        <div class="nav-title">EVA后台管理系统</div>
+        <div class="nav-out">
+            <button class="btn btn-toolbar log-out" id="outPage" ui-sref="login">退出</button>
+        </div>
+        <!--手机导航-->
+        <nav class="moblie-nav main-nav bgc-gray font-size-16 " role="navigation">
+            <div class="padding-0 container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse" aria-expanded="true">
+                        <img style="background: #ffffff;" src="../img/menu.png" alt="#">
+                    </button>
+                </div>
+                <div id="example-navbar-collapse" class="navbar-collapse collapse in" aria-expanded="true" style="padding: 0px;">
+                    <ul class="navbar-nav my-nav nav ">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <div data-toggle="collapse" data-parent="#accordion"
+                                         href="#collapseOne" class="hand">
+                                        信息管理
+                                    </div>
+                                </h4>
+                            </div>
+                            <!--id="collapseOne"-->
+                            <div class="panel-collapse collapse">
+                                <div class="panel-body clr-blk" ui-sref=".articleList1">
+                                    <a href="#">公司管理</a>
+                                </div>
+                                <div class="panel-body clr-blk" ui-sref=".articleList2">
+                                    <a href="#">职位列表</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <div data-toggle="collapse" data-parent="#accordion"
+                                         href="#collapseTwo" class="hand">
+                                        Article管理
+                                    </div>
+                                </h4>
+                            </div>
+                            <!--id="collapseTwo"-->
+                            <div class="panel-collapse collapse">
+                                <div class="panel-body clr-blk" ui-sref=".articleList3">
+                                    <a href="#">article列表</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <div data-toggle="collapse" data-parent="#accordion"
+                                         href="#collapseThree" class="hand">
+                                        人才管理
+                                    </div>
+                                </h4>
+                            </div>
+                            <!--id="collapseThree"-->
+                            <div class="panel-collapse collapse">
+                                <div class="panel-body clr-blk" ui-sref=".articleList1">
+                                    <a href="#">article列表</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <div data-toggle="collapse" data-parent="#accordion"
+                                         href="#collapseFour" class="hand">
+                                        推荐管理
+                                    </div>
+                                </h4>
+                            </div>
+                            <!--id="collapseFour"-->
+                            <div class="panel-collapse collapse">
+                                <div class="panel-body clr-blk" ui-sref=".articleList2">
+                                    <a href="#">article列表</a>
+                                </div>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!--边栏导航-->
+    <div class="pc-nav side-bar sidebar">
+        <div class="sidebar-nav navbar-collapse collapse">
+            <ul class="nav in side ">
+                <div class="panel-group" id="accordion">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <div data-toggle="collapse" data-parent="#accordion"
+                                   href="#collapseOne" class="hand">
+                                    信息管理
+                                </div>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse">
+                            <div class="panel-body clr-blk" ui-sref=".articleList1">
+                                <a href="#">公司管理</a>
+                            </div>
+                            <div class="panel-body clr-blk" ui-sref=".articleList2">
+                                <a href="#">职位列表</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <div data-toggle="collapse" data-parent="#accordion"
+                                   href="#collapseTwo" class="hand">
+                                    Article管理
+                                </div>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse">
+                            <div class="panel-body clr-blk" ui-sref=".articleList3">
+                                <a href="#">article列表</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <div data-toggle="collapse" data-parent="#accordion"
+                                   href="#collapseThree" class="hand">
+                                    人才管理
+                                </div>
+                            </h4>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse">
+                            <div class="panel-body clr-blk" ui-sref=".articleList1">
+                                <a href="#">article列表</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <div data-toggle="collapse" data-parent="#accordion"
+                                   href="#collapseFour" class="hand">
+                                    推荐管理
+                                </div>
+                            </h4>
+                        </div>
+                        <div id="collapseFour" class="panel-collapse collapse">
+                            <div class="panel-body clr-blk" ui-sref=".articleList2">
+                                <a href="#">article列表</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </div>
+
+    <div>
+        <div ui-view="">
+            <div class="wel">Welcome!</div>
+            <img class="title-img" src="../img/IPEA.png" alt="">
+        </div>
+    </div>
+</div>
+

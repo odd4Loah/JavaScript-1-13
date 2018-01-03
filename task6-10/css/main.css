@@ -1,0 +1,60 @@
+body {
+    background: url("../img/NERV.jpg");
+    background-size: cover;
+    /*background-repeat: no-repeat;*/
+}
+
+.login-bgc {
+    /*background: url("../img/cock.ico");*/
+}
+.log-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.log-table {
+    margin-top: 16vw;
+    text-align: center;
+    border-radius: 1%;
+    /*background-color: #acacac3d;*/
+    opacity: 0.9;
+    /*padding: 25px;*/
+    padding: 15px 18px 25px 14px;
+}
+.log-table > h4 {
+    color: #ffffff;
+    font-weight: 600;
+}
+.content1 {
+    margin-bottom: 1rem;
+}
+.write-user,
+.write-code {
+    height: 2.5rem;
+    padding-left: 3rem;
+    margin: .7rem;
+    background-image: url(../img/user-admin.png);
+    background-size: 8%;
+    background-repeat: no-repeat;
+    background-position: .5rem .5rem;
+    border: none;
+}
+.write-code {
+    background-image: url(../img/lock.png);
+    margin-bottom: 1.5rem;
+
+}
+#alert1 {
+    color: #ff0000;
+    height: 20px;
+    margin-bottom: 10px;
+}
+.login-btn {
+    width: 25%;
+    color: #f7f7f7;
+    background-color: #0808084f;
+}
+/*.btn:hover {*/
+    /*color: #333;*/
+    /*text-decoration: none;*/
+/*}*/
